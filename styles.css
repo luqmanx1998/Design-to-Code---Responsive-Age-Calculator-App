@@ -1,0 +1,217 @@
+/* CSS CUSTOM PROPERTIES */
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --lightred: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --offwhite: hsl(0, 0%, 94%);
+    --lightgrey: hsl(0, 0%, 86%);
+    --smokeygrey: hsl(0, 1%, 44%);
+    --offblack: hsl(0, 0%, 8%);
+}
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* STYLES */
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--lightgrey);
+    padding: 4rem 1.2rem;
+}
+
+h1 {
+    font-size: 5.2rem;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.form {
+    background-color: var(--white);
+    padding: 4.8rem 2.4rem;
+    border-radius: 16px;
+    border-bottom-right-radius: 64px;
+    max-width: 84rem;
+}
+
+.form__dates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    border-bottom: 1px solid var(--lightgrey);
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.form__date label {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--smokeygrey);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+input[type="number"] {
+    padding: 1rem 1.2rem;
+    width: 100%;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--lightgrey);
+}
+
+input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+input:focus {
+    outline: 1px solid var(--purple);
+}
+
+.error-state {
+    display: none;
+    color: var(--lightred);
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.show-error-state {
+    display: block;
+}
+
+.invalid-highlight {
+    outline: 1px solid var(--lightred);
+}
+
+.form__date > .invalid-dates {
+    color: var(--lightred);
+    border: none; 
+    outline: none;
+}
+
+.submit-btn {
+    background-color: var(--purple);
+    padding: 1.8rem;
+    border-radius: 50%;
+    justify-self: start;
+    align-self: start;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.submit-btn:hover {
+    bottom: 1%;
+    box-shadow: 0px 13px 22px 1px rgba(0,0,0,0.29);
+}
+
+.submit-btn:active {
+    bottom: -3%;
+    box-shadow: none;
+    background-color: var(--offblack);
+}
+
+.arrow-img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.form__results {
+    margin-top: 7rem;
+}
+
+.form__results h1 span {
+    color: var(--purple);
+    letter-spacing: 0.2rem;
+    margin-right: -1.1rem;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    h1 {
+        font-size: 10.8rem;
+        letter-spacing: -0.4rem;
+    }
+
+    .form__results h1:not(:last-child) {
+        margin-bottom: -1.6rem;
+    }
+
+    .form {
+        width: 84rem;
+        padding: 5.5rem 5.5rem;
+        border-bottom-right-radius: 208px;
+    }
+
+    .form__dates {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .form__date {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form__date label {
+        font-size: 1.6rem;
+    }
+
+    input[type="number"] {
+        width: 16rem;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        font-size: 3.2rem;
+    }
+
+    input::placeholder {
+        font-size: 3.2rem;
+    }
+
+    .submit-btn {
+        left: 100%;
+        transform: translate(-100%, 50%);
+        padding: 2.8rem;
+
+    }
+
+    .arrow-img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .form__results {
+        margin-top: 4.2rem;
+    }
+
+    .form__results h1 span {
+        letter-spacing: 1.2rem;
+        margin-right: -2.1rem;
+    }
+}

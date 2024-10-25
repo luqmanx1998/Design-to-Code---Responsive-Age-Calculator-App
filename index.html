@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script defer src="main.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Age calculator app</title>
+</head>
+<body>
+  <main>
+    <form id="form" class="form">
+
+      <div class="form__dates">
+        <div class="form__date form__date--day">
+          <label for="day">Day</label>
+          <input type="number" name="day" id="day" placeholder="DD">
+          <p class="error-state">&nbsp;</p>
+        </div>
+
+        <div class="form__date form__date--month">
+          <label for="month">Month</label>
+          <input type="number" name="month" id="month" placeholder="MM">
+          <p class="error-state">&nbsp;</p>
+        </div>
+
+        <div class="form__date form__date--year">
+          <label for="year">Year</label>
+          <input type="number" name="year" id="year" placeholder="YYYY">
+          <p class="error-state">&nbsp;</p>
+        </div>
+
+        <button class="submit-btn" type="submit">    
+          <img src="assets/images/icon-arrow.svg" alt="Arrow-icon" class="arrow-img">
+        </button>
+      </div>
+
+      <div class="form__results">
+        <h1>
+          <span class="yearResult">--</span> years
+        </h1>
+        <h1>
+          <span class="monthResult">--</span> months
+        </h1>
+        <h1>
+          <span class="dayResult">--</span> days
+        </h1>
+      </div>
+    </form>
+  </main>
+  </div>
+</body>
+</html>
